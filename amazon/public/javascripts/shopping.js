@@ -27,7 +27,7 @@ angular.module('shopping', [])
             }
 
             $scope.finalizePurchase = function(product) {
-                return $http.put('/shopping/' + product._id + '/finalizePurchase')
+                return $http.put('/shopping/' + product._id + '/purchase')
                     .success(function(data) {
                         console.log("finalizePurchase worked");
                         product.timesPurchased += 1;

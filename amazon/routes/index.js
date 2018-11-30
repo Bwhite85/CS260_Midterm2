@@ -22,6 +22,7 @@ router.put('/shopping/:product/purchase', function(req, res, next) {
     req.product.purchase(function(err, product) {
         if (err) { return next(err); }
         res.json(product);
+        console.log(product);
     });
 });
 
